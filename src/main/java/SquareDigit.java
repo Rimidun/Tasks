@@ -1,36 +1,36 @@
+import java.util.Arrays;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+
 public class SquareDigit {
     public static void main(String[] args) {
-        int number = 1234511;
-        int y = 0;
 
-        int[]arrays = new int [String.valueOf(number).length()];
+        int n = 24659;
 
-//        while (number != 0){
-//            y = number % 10;
-//            number /= 10;
-//            System.out.println(y);
-//        }
-
-        for (int i = 0; i < String.valueOf(number).length(); i++) {
-            arr
-        }
-
+        System.out.println(squareDigits(n));
 
 
 
     }
 
-//    public static int result(int number) {
-//        int x = 0;
-//
-//        while (number != 0) {
-//            System.out.print(x = number % 10);
-//            number /= 10;
-//        }
-//
-//
-//        return x;
-//    }
+    public static int squareDigits(int n) {
 
+        int y = 0; //переменнаая для умножения
+        int[] arrays = new int[String.valueOf(n).length()]; //создали массив длинной как исходный инт
+
+        for (int i = String.valueOf(n).length() - 1; i > -1; i--) {
+            y = n % 10;
+            n /= 10;
+            arrays[i] = y * y;  //заполнили массив с конца удвоенными числами инт
+        }
+
+        String str = Arrays.stream(arrays)
+                .mapToObj(String::valueOf)
+                .collect(Collectors.joining()); //получаем из каждого числа строку и соединяем строки
+
+        int num = Integer.parseInt(str); // преобразовываем строку в число
+
+        return num;
+    }
 
 }
