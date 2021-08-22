@@ -13,11 +13,10 @@ public class DeodorantEvaporator {
     public static int evaporator(double content, double evap_per_day, double threshold) {
 
 
-        double lifeOfEvaporator = content * (threshold/100);
-        System.out.println(lifeOfEvaporator);
+        double lifeOfEvaporator = content * (threshold / 100);
         int day = 0;
         while (content > lifeOfEvaporator) {
-            content = ((content * (evap_per_day/100) * (-1)) + content);
+            content = ((content * (evap_per_day / 100) * (-1)) + content);
             day++;
         }
         return day;
