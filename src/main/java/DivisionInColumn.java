@@ -3,10 +3,10 @@ import java.util.List;
 
 public class DivisionInColumn {
     public static void main(String[] args) {
-        int a = 100;
-        int b = 3;
+        int dividend = 100;
+        int divisor = 3;
 
-        System.out.println(div(a, b));
+        System.out.println(div(dividend, divisor));
     }
 
     public static long div(long dividend, long divisor) {
