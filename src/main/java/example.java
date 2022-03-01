@@ -2,8 +2,6 @@ public class example {
 
 
     public static void main(String[] args) {
-        int dividend = 1;
-        int divisor = 2;
 
         System.out.println(makeDivision(226, 4));
 
