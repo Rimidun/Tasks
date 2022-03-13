@@ -25,11 +25,12 @@ public class ColorFrame extends JFrame {
 
 
     public static void main(String[] args) throws Exception {
+        ColorFrame colorFrame = new ColorFrame();
 
         while (true) {
-            ColorFrame colorFrame = new ColorFrame();
+
             colorFrame.showOnRandomPlace();
-            Thread.sleep(100);
+            Thread.sleep(1000);
         }
 
 
