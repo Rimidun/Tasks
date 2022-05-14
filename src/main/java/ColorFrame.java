@@ -11,12 +11,13 @@ public class ColorFrame extends JFrame {
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
     }
 
-    Color color() {
+    Color color() throws Exception {
         Random random = new Random();
+        //Thread.sleep(3000);
         return new Color(random.nextInt(255), random.nextInt(255), random.nextInt(255));
     }
 
-    public void showOnRandomPlace() {
+    public void showOnRandomPlace() throws Exception {
         Random random = new Random();
         setLocation(random.nextInt(1200), random.nextInt(700));
         getContentPane().setBackground(color());
